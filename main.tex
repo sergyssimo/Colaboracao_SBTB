@@ -1,11 +1,13 @@
-\documentclass[a4paper]{scrbook}
+\documentclass[a4paper,oneside]{scrbook}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[brazil]{babel}
 \usepackage[normalem]{ulem}
 \usepackage{indentfirst}
 %\usepackage{parskip}
-\usepackage{hyperref}
+%\usepackage{hyperref}
+
+\usepackage{nonumonpart} % Faz com que as partes não sejam numeradas.
 \usepackage{url}
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
@@ -17,9 +19,17 @@
 \begin{document}
 
 \maketitle
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+
 \tableofcontents
 
+\cleardoublepage
+
 \part{Antigo Testamento}
+\pagenumbering{arabic}
+\setcounter{page}{1}
 \input{AT}
 
 \part{Novo Testamento}
